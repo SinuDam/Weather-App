@@ -17,7 +17,7 @@ A simple weather web app that displays current weather conditions for any city u
 
 ## 🔗 Live Demo
 
-[Click here to view the live site](https://yourusername.github.io/weather-app)
+[Click here to view the live site][(https://yourusername.github.io/weather-app)](https://sinudam.github.io/Weather-App/)
 
 ## 📦 How to Run Locally
 
