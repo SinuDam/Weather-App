@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: larger;
+  background: linear-gradient(to right, #0066ff, #00f2ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  color: #002864;
+}
+
+.container {
+  background-color: rgb(153, 228, 255);
+  padding: 50px;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 800px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+input {
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 10px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #0069d2;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #003355;
+}
+
+#weatherBox {
+  margin-top: 20px;
+}
+
+#error {
+  color: red;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+  animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
