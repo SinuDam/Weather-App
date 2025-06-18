@@ -1,5 +1,5 @@
 const apiKey = "70d339c1ad416bcadb0c44dc46366068";
-const fullUrl = apiUrl + "London&appid=70d339c1ad416bcadb0c44dc46366068, Colombo&appid=70d339c1ad416bcadb0c44dc46366068";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
 
 document.getElementById("searchBtn").addEventListener("click", () => {
   const city = document.getElementById("cityInput").value.trim();
@@ -13,11 +13,11 @@ document.getElementById("searchBtn").addEventListener("click", () => {
   }
 
   fetch(`${apiUrl}${city}&appid=${apiKey}&units=metric`)
-    .then((response) => {
-      if (!response.ok) throw new Error("Sorry, City not found!");
+    .then(response => {
+      if (!response.ok) throw new Error("City not found");
       return response.json();
     })
-    .then((data) => {
+    .then(data => {
       document.getElementById("cityName").textContent = `${data.name}, ${data.sys.country}`;
       document.getElementById("temp").textContent = `🌡 Temperature: ${data.main.temp} °C`;
       document.getElementById("description").textContent = `🌤 ${data.weather[0].description}`;
@@ -27,9 +27,8 @@ document.getElementById("searchBtn").addEventListener("click", () => {
       weatherBox.classList.remove("hidden");
       error.textContent = "";
     })
-    .catch((err) => {
+    .catch(err => {
       error.textContent = err.message;
       weatherBox.classList.add("hidden");
     });
 });
-s
